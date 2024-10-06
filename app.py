@@ -48,3 +48,5 @@ if st.button('Predict'):
     result = prediction(days_booking, booking_type, special_requests, price_per_room, adults_per_room,
                         weekend_nights, parking_included, week_nights, day_of_arrival, month_of_arrival, weekday_of_arrival)
     st.text('Prediction: ' + result)
+if __name__ =='prediction':
+        prediction()
