@@ -19,7 +19,7 @@ def prediction(days_booking, booking_type, special_requests, price_per_room, adu
     prediction = model.predict(input_data)
     
     # You might want to return a more user-friendly result (e.g., 'Cancelled' or 'Not Cancelled')
-    if prediction[0] == 1:
+    if prediction>0.5:
         return f'This booking is more likely to canceled: chances = {(prediction*100)}%'
     else:
         return f'This booking is less likely to get canceled: chances = {(prediction*100)}%'
