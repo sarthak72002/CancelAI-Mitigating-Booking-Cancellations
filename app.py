@@ -16,7 +16,7 @@ def prediction(days_booking, booking_type, special_requests, price_per_room, adu
                             weekend_nights, parking_included, week_nights, day_of_arrival, month_of_arrival, weekday_of_arrival]])
     
     # Make a prediction using the loaded model
-    prediction = model.predict(input_data)
+    prediction = model.predict_proba(input_data)[:,1][0]
     
     # You might want to return a more user-friendly result (e.g., 'Cancelled' or 'Not Cancelled')
     if prediction>0.5:
