@@ -20,9 +20,9 @@ def prediction(days_booking, booking_type, special_requests, price_per_room, adu
     
     # You might want to return a more user-friendly result (e.g., 'Cancelled' or 'Not Cancelled')
     if prediction[0] == 1:
-        return f'This booking is more likely to canceled: chances = {round(prediction*100,2)}%'
+        return f'This booking is more likely to canceled: chances = {(prediction*100)}%'
     else:
-        return f'This booking is less likely to get canceled: chances = {round(prediction*100,2)}%'
+        return f'This booking is less likely to get canceled: chances = {(prediction*100)}%'
 
 # Streamlit App
 st.title('INN Group of Hotels')
